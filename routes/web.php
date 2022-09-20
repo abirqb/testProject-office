@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AboutController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,14 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about', function () {
-    return view('about');
-})->middleware('check');
 
-
-Route::get('/myname', function () {
-     echo "This is Syscon..." ;
-});
+Route::get('/about', [AboutController::class, 'index']);
 
 Route::get('/oldcontact', function () {
     return view('contact');
@@ -30,5 +25,5 @@ Route::get('/oldcontact', function () {
 Route::get('/contact', [ContactController::class, 'index']);
 
 Route::get('/home', function () {
-    echo 'We are at 2nd Home page, cheers!';
+    return view('welcome');
 });
