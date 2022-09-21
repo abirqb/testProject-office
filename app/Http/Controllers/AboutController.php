@@ -15,6 +15,11 @@ class AboutController extends Controller
         return view('sign_up');
     }
 
+    public function new(){
+        return view('designed_form');
+    }
+    
+
     public function DataSubmit(Request $data){
 
         return $data; //->fname

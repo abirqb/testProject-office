@@ -21,6 +21,8 @@ Route::get('/about', [AboutController::class, 'index']);
 Route::get('/signup', [AboutController::class, 'SignUp']);
 Route::post('/data-submit', [AboutController::class, 'DataSubmit']);
 
+Route::get('/signup2', [AboutController::class, 'new']);
+
 
 
 Route::get('/oldcontact', function () {

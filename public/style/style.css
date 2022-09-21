@@ -1,0 +1,16 @@
+h1, h2 {
+    color: brown;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clone , .modded {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.modded {
+    font-weight: bold;
+    color:brown;
+    font-family: Arial, Helvetica, sans-serif;
+}
