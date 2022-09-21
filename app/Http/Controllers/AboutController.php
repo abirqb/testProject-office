@@ -10,4 +10,13 @@ class AboutController extends Controller
     {
         return view('about');
     }
+
+    public function SignUp(){
+        return view('sign_up');
+    }
+
+    public function DataSubmit(Request $data){
+
+        return $data; //->fname
+    }
 }
