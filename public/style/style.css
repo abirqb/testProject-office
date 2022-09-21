@@ -14,3 +14,13 @@ h1, h2 {
     color:brown;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+.wholetext {
+    text-align: center;
+  
+    border:2px solid black;
+    width: 55%;
+    margin:0 auto;
+    margin-top: 10vh;
+    /* outline:2px solid red; */
+}

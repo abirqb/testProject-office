@@ -3,8 +3,14 @@
 <head>
     <title>Document</title>
     <link rel="stylesheet" href="{{asset('style/style.css')}}">
+    
 </head>
 <body>
+<h1>Get yourself signed up!</h1>
+        <a href="/">Home</a> |
+        <a href="about">About</a> |
+        <a href="contact">Contact</a> | 
+    <div class="wholetext">
 <h1>Sign Up</h1>
 <u><h2>Required fields to be submitted-</h2></u>
 
@@ -24,5 +30,6 @@
  <input type="password" id="pass" name="pass" value=""><br><br>
  <button type="submit">Submit</button>
 </form
+</div>
 </body>
 </html>

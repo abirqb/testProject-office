@@ -13,7 +13,8 @@
     <h1>Syscon Solution Limited</h1>
     <h2>Uttara Sector 09, Road#02, House-27</h2>
     <h3>Uttara,Dhaka,Bangladesh</h3>    
-    <h3>Email- info@syscon.sol.com uu</h3>
+    <h3>Email- info@syscon.sol.com</h3>
+    <button onclick="document.location='/'">Back to Home</button> 
     </div>
 </body>
 </html>
