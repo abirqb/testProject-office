@@ -4,25 +4,20 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\HomeIndex;
+use App\Model\Article;
 
 /*
 |--------------------------------------------------------------------------
 | Web Routes
 |--------------------------------------------------------------------------
-
-
-
-Route::get('/', function () {
-    return view('welcome');
-});*/
+*/
 
 
 Route::get('/about', [AboutController::class, 'index']);
 Route::get('/signup', [AboutController::class, 'SignUp']);
-Route::post('/data-submit', [AboutController::class, 'DataSubmit']);
 
 Route::get('/signup2', [AboutController::class, 'new']);
-
+Route::post('/signup2', [AboutController::class, 'DataSubmit']);
 
 
 Route::get('/oldcontact', function () {

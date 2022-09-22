@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Document</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="{{asset('style/style.css')}}">
-    
-</head>
+    <link rel="stylesheet" href="{{asset('style/signup.css')}}">
+</head> 
+<!-- Head....-->
+
 <body>
-<h1>Get yourself signed up!</h1>
+    <div class="empty">
+    <h1>Get yourself signed up!</h1>
         <a href="/">Home</a> |
         <a href="about">About</a> |
         <a href="contact">Contact</a> | 
+    </div>
     <div class="wholetext">
 <h1>Sign Up</h1>
 <u><h2>Required fields to be submitted-</h2></u>
 
-<form class="clone" method="post" action="{{url('data-submit')}}">
+<form class="clone" method="POST" action="{{url('signup2')}}">
 @csrf
  <label for="fname">First name:</label><br>
  <input type="text" id="fname" name="fname" value=""><br>
@@ -29,7 +33,7 @@
  <label for="pass">Password:</label><br>
  <input type="password" id="pass" name="pass" value=""><br><br>
  <button type="submit">Submit</button>
-</form
+</form>
 </div>
 </body>
 </html>
