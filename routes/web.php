@@ -5,6 +5,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\HomeIndex;
 use App\Model\Article;
+use App\Model\Feedback;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +16,7 @@ use App\Model\Article;
 
 Route::get('/about', [AboutController::class, 'index']);
 Route::get('/signup', [AboutController::class, 'SignUp']);
+Route::post('/signup', [AboutController::class, 'Comments']);
 
 Route::get('/signup2', [AboutController::class, 'new']);
 Route::post('/signup2', [AboutController::class, 'DataSubmit']);
@@ -27,6 +29,7 @@ Route::get('/oldcontact', function () {
 
 Route::get('/', [HomeIndex::class, 'index']);
 Route::get('/confirm', [HomeIndex::class, 'success']);
+Route::get('/confirm2', [HomeIndex::class, 'get_success']);
 Route::get('/contact', [ContactController::class, 'index']);
 
 Route::middleware([

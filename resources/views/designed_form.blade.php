@@ -13,6 +13,7 @@
         <a href="/">Home</a> |
         <a href="about">About</a> |
         <a href="contact">Contact</a> | 
+        <a href="signup">Feedback</a> 
     </div>
     <div class="wholetext">
 <h1>Sign Up</h1>

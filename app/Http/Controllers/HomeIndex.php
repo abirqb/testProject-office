@@ -9,11 +9,14 @@ class HomeIndex extends Controller
     public function index()
     {
         return view('welcome');
-        return view('confirm');
     }
     public function success()
     {
         return view('confirm');
+    }
+    public function get_success()
+    {
+        return view('confirm2');
     }
 
 }
