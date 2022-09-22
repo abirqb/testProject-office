@@ -26,6 +26,7 @@ Route::get('/oldcontact', function () {
 
 
 Route::get('/', [HomeIndex::class, 'index']);
+Route::get('/confirm', [HomeIndex::class, 'success']);
 Route::get('/contact', [ContactController::class, 'index']);
 
 Route::middleware([

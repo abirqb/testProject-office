@@ -40,7 +40,7 @@ class AboutController extends Controller
         $article->password = $data->pass;
          
         $article->save();
-        return redirect('/signup2');
+        return redirect('confirm');
     }
 
 

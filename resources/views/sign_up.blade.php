@@ -1,13 +1,23 @@
-<h1>Sign Up</h1>
-
-
-<h2>Text input fields</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Feedback</title>
+  <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+  <div class='wholetext'>
+<h1>Put your Feedback </h1>
 
 <form method="post" action="{{url('data-submit')}}">
 @csrf
-  <label for="fname">First name:</label><br>
+  <label for="name">Your Name:</label><br>
   <input type="text" id="fname" name="fname" value=""><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" value="">
+  <label for="email">Email:</label><br>
+  <input type="text" id="lname" name="lname" value=""><br>
+  <label for="text">Your Comments:</label><br>
+  <textarea name="message" style='width: 200px, height: 600px;'></textarea><br>
   <button type="submit">Submit</button>
-</form
+</form>
+</div>
+</body>
+</html>
