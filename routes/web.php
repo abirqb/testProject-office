@@ -45,3 +45,4 @@ Route::middleware([
 
 
 Route::get('dblist', [DBController::class, 'Database']);
+Route::get('delete/{id}', [DBController::class, 'Delete']);

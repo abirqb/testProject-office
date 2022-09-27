@@ -9,7 +9,13 @@ class DBController extends Controller
 {
     public function Database(){
 
-        return Artical::all();
+         $store = Artical::all();
+         return view('dblist', ['new'=>$store]);
         //return view('dblist');
+    }
+    public function Delete($id){
+        $store = Artical::find($id);
+        $store->delete();
+        return redirect('dblist');
     }
 }
