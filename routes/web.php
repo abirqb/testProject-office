@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\HomeIndex;
+use App\Http\Controllers\DBController;
 use App\Model\Article;
 use App\Model\Feedback;
 
@@ -41,3 +42,6 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+
+Route::get('dblist', [DBController::class, 'Database']);
