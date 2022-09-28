@@ -18,4 +18,9 @@ class DBController extends Controller
         $store->delete();
         return redirect('dblist');
     }
+
+    public function Edit($id){
+        $data = Artical::find($id);
+        return view('editdb', ['hold'=>$data]);
+    }
 }

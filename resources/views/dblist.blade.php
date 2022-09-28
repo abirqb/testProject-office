@@ -23,14 +23,16 @@
             <td>{{$new['lname']}}</td>
             <td>{{$new['phone']}}</td>
             <td>{{$new['email']}}</td>
-            <td>{{$new['birth']}}</td>  
+            <td>{{$new['birth']}}</td>
             <td>{{$new['password']}}</td>
-            <td><a href="delete/"$new='id'>Delete</a></td>
+            <td><a href="{{url('delete/'.$new['id'])}}">Delete</a></td>
+            <td><a href="{{url('edit/' .$new['id'])}}">Edit</a></td>
         </tr>
         @endforeach
     </table>
 
     <br><br>
+    <button onclick="document.location='/dblist'">Add New Record</button> <br>
     <button onclick="document.location='/'">Back to Home</button> 
     <button onclick="document.location='/dblist'">Refesh</button> 
 </body>
