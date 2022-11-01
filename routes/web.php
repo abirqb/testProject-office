@@ -46,3 +46,5 @@ Route::middleware([
 Route::get('dblist', [DBController::class, 'Database']);
 Route::get('delete/{id}', [DBController::class, 'Delete']);
 Route::get('edit/{id}', [DBController::class, 'Edit']);
+
+//laptop_in
