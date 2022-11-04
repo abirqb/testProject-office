@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\Artical;
 use App\Models\Feedback;
+use App\Models\Member;
 
 class AboutController extends Controller
 {
@@ -51,6 +52,49 @@ class AboutController extends Controller
         $paper->comments = $data->message;
         $paper->save();
         return redirect('confirm2');
+    }
+
+
+    /*
+    Testing from here 
+    */
+
+    public function Info(Request $data){
+        $member = new Member;
+        $member->name = $data->name;
+        $member->email = $data->email;
+        $member->id = $data->id;
+        $member->password = $data->password;
+        $member->save();
+        return redirect('field');
+    }
+
+    public function Database(){
+        $store = Member::all();
+        return view('test5' , ['new'=>$store]); 
+    }
+
+    public function Delete($id)
+    {
+        $store = Member::find($id);
+        $store->delete();
+        return redirect('field3');
+        //$store = save();
+    }
+
+    public function Update($id)
+    {
+        $store = Member::find($id);
+        return view('test2update', ['data'=>$store]);
+    }
+    public function UpdatePost(Request $req)
+    {
+        $data = Member::find($req->id);
+        $data->name = $req->name;
+        $data->email = $req->email;
+        $data->password = $req->password;
+        $data->save();
+        return redirect('field3');
     }
 
 

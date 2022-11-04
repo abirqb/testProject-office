@@ -18,7 +18,6 @@ use App\Model\Feedback;
 Route::get('/about', [AboutController::class, 'index']);
 Route::get('/signup', [AboutController::class, 'SignUp']);
 Route::post('/signup', [AboutController::class, 'Comments']);
-
 Route::get('/signup2', [AboutController::class, 'new']);
 Route::post('/signup2', [AboutController::class, 'DataSubmit']);
 
@@ -43,6 +42,27 @@ Route::middleware([
     })->name('dashboard');
 });
 
+/*
+|--------------------------------------------------------------------------
+| Database Routes 
+|--------------------------------------------------------------------------
+*/
+
 Route::get('dblist', [DBController::class, 'Database']);
 Route::get('delete/{id}', [DBController::class, 'Delete']);
 Route::get('edit/{id}', [DBController::class, 'Edit']);
+
+
+/*
+|--------------------------------------------------------------------------
+| Test my works
+|--------------------------------------------------------------------------
+*/
+
+Route::post('field1', [AboutController::class, 'Info']);
+Route::view('field', 'test');
+
+Route::get('field3',[AboutController::class,'Database']);
+Route::get('delete{id}', [AboutController::class,'Delete']);
+Route::post('field2', [AboutController::class, 'UpdatePost']);
+Route::get('edit/{id}', [AboutController::class,'Update']);
